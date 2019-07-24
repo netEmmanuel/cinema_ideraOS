@@ -44,6 +44,8 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
 
+The production server is at https://cinema-idera-os.herokuapp.com/
+
 Check out the API documentation for the different endpoints here
 
     https://documenter.getpostman.com/view/5430538/SVSRGRXE
