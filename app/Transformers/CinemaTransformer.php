@@ -13,14 +13,14 @@ class CinemaTransformer extends TransformerAbstract
      * @param \App\Models\Cinema
      * @return array
     */
-    public function transform(Cinema $user)
+    public function transform(Cinema $cinema)
     {
         return [
-            'first_name' => (string) $user->first_name,
-            'last_name' => (string) $user->last_name,
-            'email' => (string) $user->email,
-            'phone' => (string) $user->phone,
-            'token' => (string) $user->token,
+            'first_name' => (string) $cinema->first_name,
+            'last_name' => (string) $cinema->last_name,
+            'email' => (string) $cinema->email,
+            'phone' => (string) $cinema->phone,
+            'token' => (string) $cinema->token,
         ];
     }
 }

@@ -8,8 +8,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['namespace' => 'Api'], function () {
     Route::post('users', 'AuthController@register');
-    Route::post('login', 'AuthController@login');
-    Route::post('cinema', 'CinemaController@create');
-    Route::post('movies', 'MovieController@create');
-    Route::get('cinemas', 'CinemaController@getCinemas');
+    Route::post('login', 'AuthController@login')->name('login');
+    Route::group(['middleware'  =>  'auth:api'], function () {
+        Route::post('cinema', 'CinemaController@create');
+        Route::post('movies', 'MovieController@create');
+        Route::get('cinemas', 'CinemaController@getCinemas');
+    });
 });
