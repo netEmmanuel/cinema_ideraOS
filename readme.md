@@ -44,6 +44,10 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
 
+Check out the API documentation for the different endpoints here
+
+    https://documenter.getpostman.com/view/5430538/SVSRGRXE
+
 **TL;DR command list**
 
     git clone git@github.com:netEmmanuel/cinema_ideraOS.git
