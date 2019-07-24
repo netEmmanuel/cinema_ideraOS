@@ -24,4 +24,15 @@ class UserTransformer extends TransformerAbstract
             'token' => (string) $user->token,
         ];
     }
+
+    /**
+     * @param \App\Models\User
+     * @return array
+    */
+    public function login(User $user)
+    {
+        return [
+            'token' => (string) $user->token,
+        ];
+    }
 }

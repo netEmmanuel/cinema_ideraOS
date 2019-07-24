@@ -70,6 +70,21 @@ class ApiController extends Controller
     }
 
     /**
+     * success with message.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    protected function success($message, $statusCode)
+    {
+        return $this->respond([
+            'success' => [
+                'data' => $message,
+                'status_code' => $statusCode
+            ]
+        ], $statusCode);
+    }
+
+    /**
      * Respond with created.
      *
      * @param $data
